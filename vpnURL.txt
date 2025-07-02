@@ -1,5 +1,5 @@
 proxies:
-  - name: "test2"  # 节点名称（可自定义）
+  - name: "回国01"  # 节点名称（可自定义）
     type: vmess
     server: 49.235.149.131
     port: 43319
