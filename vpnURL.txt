@@ -10,13 +10,13 @@ proxies:
     ws-opts:
       path: "/a71981ad"
       headers: 
-        Host: ""  # 留空（若x-ui配置了Host头则需填写）
+        Host: ""  # 
 
 proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - "test2"
+      - "回国01"
 
 rules:
   - GEOIP,CN,DIRECT  # 国内直连
