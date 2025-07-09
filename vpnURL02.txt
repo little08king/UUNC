@@ -1,0 +1,23 @@
+proxies:
+  - name: "回国02"  # 节点名称（可自定义）
+    type: vmess
+    server: 49.235.149.131
+    port: 42085	
+    uuid: d115b6b0-0de0-403b-d320-d3ed954ced41
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: "/"
+      headers: 
+        Host: ""  # 
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "回国02"
+
+rules:
+  - GEOIP,CN,DIRECT  # 国内直连
+  - MATCH,PROXY      # 其他走代理
